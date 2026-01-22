@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="lombok.AccessLevel"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="com.shiva.auth_service_service.AuthService"/>
+    <fullyQualifiedTypeName name="com.shiva.auth_service_entity.Admin"/>
+    <fullyQualifiedTypeName name="com.shiva.auth_service_repository.AdminRepository"/>
+</qualifiedTypeNameHistroy>
