@@ -1,13 +1,14 @@
 package com.shiva.auth_service;
 
 import org.springframework.boot.SpringApplication;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.boot.CommandLineRunner;
 import com.shiva.auth_service.entity.Admin;
 import com.shiva.auth_service.repository.AdminRepository;
-import com.shiva.auth_service_config.*;
+import com.shiva.auth_service.config.*;
 
 @SpringBootApplication
 public class AuthServiceApplication {

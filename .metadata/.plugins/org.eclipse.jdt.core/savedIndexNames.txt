@@ -14,7 +14,6 @@ INDEX VERSION 1.134+D:\Temple website\.metadata\.plugins\org.eclipse.jdt.core
 272375106.index
 2197831586.index
 4174209712.index
-2791121579.index
 4213024479.index
 3300259379.index
 3883918361.index

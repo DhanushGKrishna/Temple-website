@@ -4,9 +4,11 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.Claims;
 
 @Component
 public class JwtUtil{
@@ -24,6 +26,43 @@ public class JwtUtil{
 				.signWith(SignatureAlgorithm.HS256, secret)
 				.compact();
 				
+	}
+	
+	// Extract Username from JWT
+	
+	public String extractUsername(String token) {
+		return extractAllClaims(token).getSubject();
+	}
+	
+	//Validate token
+	
+	public boolean validateToken(String token, UserDetails userDetails) {
+		final String username = extractUsername(token);
+		return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
+	}
+	
+	public boolean validateToken(String token) {
+		try {
+			extractAllClaims(token);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	//Check expiration
+	private boolean isTokenExpired(String token) {
+		return extractAllClaims(token)
+				.getExpiration()
+				.before(new Date());
+	}
+	
+	//Parse Claims
+	private Claims extractAllClaims(String token) {
+		return Jwts.parser()
+				.setSigningKey(secret)
+				.parseClaimsJws(token)
+				.getBody();
 	}
 }
 
