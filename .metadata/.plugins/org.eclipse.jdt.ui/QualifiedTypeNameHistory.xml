@@ -7,4 +7,8 @@
     <fullyQualifiedTypeName name="com.shiva.auth_service_service.AuthService"/>
     <fullyQualifiedTypeName name="com.shiva.auth_service_entity.Admin"/>
     <fullyQualifiedTypeName name="com.shiva.auth_service_repository.AdminRepository"/>
+    <fullyQualifiedTypeName name="com.shiva.auth_service.security.JwtAuthenticationFilter"/>
+    <fullyQualifiedTypeName name="org.springframework.security.config.http.SessionCreationPolicy"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 </qualifiedTypeNameHistroy>

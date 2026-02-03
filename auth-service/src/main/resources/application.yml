@@ -17,8 +17,9 @@ server:
   port: 8081
 
 jwt:
-  secret: temple-secret-key
-  expiration: 86400000
+    secret: dGVtcGxlLXNlY3JldC1rZXktMTIzNDU2Nzg5MGFiY2RlZg==
+    expiration: 86400000
+
 
 
 

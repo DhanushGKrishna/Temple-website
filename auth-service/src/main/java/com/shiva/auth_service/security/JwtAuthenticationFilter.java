@@ -19,12 +19,14 @@ import java.util.Collections;
 @Component
 
 public class JwtAuthenticationFilter extends OncePerRequestFilter{
+
 	
 	private final JwtUtil jwtUtil;
 	
 	public JwtAuthenticationFilter(JwtUtil jwtUtil) {
 		this.jwtUtil = jwtUtil;
 	}
+	
 	
 	@Override
 	
@@ -33,6 +35,16 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
 			HttpServletResponse response,
 			FilterChain filterChain)
 				throws ServletException, IOException{
+		
+		System.out.println(">>> Incoming request path: " + request.getRequestURI());
+		
+		String path = request.getRequestURI();
+		
+		if(path.startsWith("/auth") || path.startsWith("/api/auth")) {
+			filterChain.doFilter(request, response);
+			return;
+		}
+		
 		String authHeader = request.getHeader("Authorization");
 		
 		if(authHeader != null && authHeader.startsWith("Bearer ")) {
@@ -53,6 +65,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
 				
 				SecurityContextHolder.getContext().setAuthentication(authentication);
 			}
+
 		}
 		
 		filterChain.doFilter(request, response);

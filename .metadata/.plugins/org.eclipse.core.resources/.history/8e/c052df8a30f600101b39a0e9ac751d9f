@@ -1,8 +1,0 @@
-package com.shiva.auth_service_repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import com.shiva.auth_service_entity.Admin;
-
-public interface AdminRepository extends JpaRepository <Admin, Long>{
-	
-}
