@@ -11,4 +11,12 @@
     <fullyQualifiedTypeName name="org.springframework.security.config.http.SessionCreationPolicy"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="com.shiva.gateway.security.JwtUtil"/>
+    <fullyQualifiedTypeName name="com.shiva.content.entity.ArticleCategory"/>
+    <fullyQualifiedTypeName name="com.shiva.content.repository.ArticleRepository"/>
+    <fullyQualifiedTypeName name="com.shiva.content.dto.ArticleRequest"/>
+    <fullyQualifiedTypeName name="com.shiva.content.service.ArticleService"/>
+    <fullyQualifiedTypeName name="com.shiva.content.entity.Article"/>
+    <fullyQualifiedTypeName name="com.shiva.content.dto.ArticleResponse"/>
+    <fullyQualifiedTypeName name="com.shiva.gateway.security.AuthenticationFilter"/>
 </qualifiedTypeNameHistroy>

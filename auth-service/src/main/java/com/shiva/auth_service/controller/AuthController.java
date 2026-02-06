@@ -12,8 +12,7 @@ import com.shiva.auth_service.service.AuthService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/auth")
-@RequiredArgsConstructor
+@RequestMapping("/api/auth")
 public class AuthController{
 	
 	private final AuthService authService;
